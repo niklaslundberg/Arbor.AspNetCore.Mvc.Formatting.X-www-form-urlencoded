@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Arbor.AspNetCore.Mvc.Formatting.HtmlForms</id>
+    <version>$version$</version>
+    <title>Arbor.AspNetCore.Mvc.Formatting.HtmlForms</title>
+    <authors>Niklas Lundberg</authors>
+    <owners></owners>
+    <description>
+    This packages makes it possible to extract values from a x-www-form-urlencoded http request into .NET poco objects.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+    
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/niklaslundberg/Arbor.AspNetCore.Mvc.Formatting.X-www-form-urlencoded</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <copyright>Copyright Niklas Lundberg 2017</copyright>
+    <dependencies>
+      <group targetFramework="netstandard1.6">
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[1.1,2.0)" />
+      </group>
+    </dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\netstandard1.6\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\netstandard1.6" />
+  </files>
+</package>
