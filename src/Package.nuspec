@@ -12,7 +12,7 @@
     <releaseNotes>
     </releaseNotes>
     <summary>
-    
+
     </summary>
     <language>en-US</language>
     <projectUrl>https://github.com/niklaslundberg/Arbor.AspNetCore.Mvc.Formatting.X-www-form-urlencoded</projectUrl>
@@ -24,11 +24,15 @@
       <group targetFramework="netstandard1.6">
         <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[1.1,2.0)" />
       </group>
+      <group targetFramework="net461">
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[1.1,2.0)" />
+      </group>
     </dependencies>
     <references></references>
     <tags></tags>
   </metadata>
   <files>
     <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\netstandard1.6\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\netstandard1.6" />
+    <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\net461\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\net461" />
   </files>
 </package>
