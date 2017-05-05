@@ -7,7 +7,7 @@
     <authors>Niklas Lundberg</authors>
     <owners></owners>
     <description>
-    This packages makes it possible to extract values from a x-www-form-urlencoded http request into .NET poco objects.
+    This packages makes it possible to extract values from a x-www-form-urlencoded or multipart/form-data http request into .NET poco objects.
     </description>
     <releaseNotes>
     </releaseNotes>

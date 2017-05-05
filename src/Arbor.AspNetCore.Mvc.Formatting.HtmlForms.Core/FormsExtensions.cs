@@ -6,12 +6,17 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
 
-namespace Arbor.AspNetCore.Formatting.HtmlForms.Core
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 {
     public static class FormsExtensions
     {
         public static T ParseFromCollection<T>(this IFormCollection formDataCollection) where T : class
         {
+            if (formDataCollection == null)
+            {
+                throw new ArgumentNullException(nameof(formDataCollection));
+            }
+
             return ParseFromCollection(formDataCollection, typeof(T)) as T;
         }
 

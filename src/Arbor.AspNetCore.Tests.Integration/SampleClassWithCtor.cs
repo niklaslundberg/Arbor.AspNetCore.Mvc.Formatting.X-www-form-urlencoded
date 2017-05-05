@@ -1,4 +1,4 @@
-namespace Arbor.AspnetCore.Mvc.Formatting.HtmlForms.Tests.Integration
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
 {
     public class SampleClassWithCtor
     {

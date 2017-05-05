@@ -6,27 +6,29 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Xunit;
 
-namespace Arbor.AspNetCore.Formatting.HtmlForms.Tests.Integration
+namespace Arbor.AspnetCore.Mvc.Formatting.HtmlForms.Tests.Integration
 {
     public class PostRequestShouldWorkWithConstructorOnly : IDisposable
     {
         private readonly TestServer _server;
         private readonly HttpClient _client;
+
         public PostRequestShouldWorkWithConstructorOnly()
         {
             _server = new TestServer(new WebHostBuilder()
-                .UseStartup<Startup>());
+                .UseStartup<Startup2>());
             _client = _server.CreateClient();
         }
 
         [Fact]
         public async Task ReturnHelloWorld()
         {
-            var response = await _client.PostAsync("/", new FormUrlEncodedContent(new List<KeyValuePair<string, string>>()
-            {
-                new KeyValuePair<string, string>("a", "hello"),
-                new KeyValuePair<string, string>("b", "4"),
-            }));
+            HttpResponseMessage response = await _client.PostAsync("/", new FormUrlEncodedContent(
+                new List<KeyValuePair<string, string>>()
+                {
+                    new KeyValuePair<string, string>("a", "hello"),
+                    new KeyValuePair<string, string>("b", "4"),
+                }));
 
             Assert.Equal(200, (int) response.StatusCode);
         }

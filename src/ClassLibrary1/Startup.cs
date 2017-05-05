@@ -1,17 +1,17 @@
 ﻿using System;
-using Arbor.AspNetCore.Formatting.HtmlForms.Core;
+using Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Arbor.AspNetCore.Formatting.HtmlForms.Tests.Integration
+namespace Arbor.AspnetCore.Mvc.Formatting.HtmlForms.Tests.Integration
 {
-    public class Startup
+    public class Startup2
     {
         private readonly ILoggerFactory _loggerFactory;
 
-        public Startup(ILoggerFactory loggerFactory)
+        public Startup2(ILoggerFactory loggerFactory)
         {
             if (loggerFactory == null)
             {

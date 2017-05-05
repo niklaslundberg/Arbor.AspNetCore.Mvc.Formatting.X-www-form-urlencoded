@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core", "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.csproj", "{3C6E668E-3220-4B7B-9ACB-498EA0576626}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{4A218689-FA01-4016-9679-D5C10A43E8D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspnetCore.Mvc.Formatting.HtmlForms.Tests.Integration", "ClassLibrary1\Arbor.AspnetCore.Mvc.Formatting.HtmlForms.Tests.Integration.csproj", "{4A218689-FA01-4016-9679-D5C10A43E8D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb", "Arbor.AspNetCore.Tests.Integration\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb.csproj", "{EB565914-5C47-41A7-AED8-1264C5013620}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,18 @@ Global
 		{4A218689-FA01-4016-9679-D5C10A43E8D8}.Release|x64.Build.0 = Release|Any CPU
 		{4A218689-FA01-4016-9679-D5C10A43E8D8}.Release|x86.ActiveCfg = Release|Any CPU
 		{4A218689-FA01-4016-9679-D5C10A43E8D8}.Release|x86.Build.0 = Release|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Debug|x64.Build.0 = Debug|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Debug|x86.Build.0 = Debug|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Release|x64.ActiveCfg = Release|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Release|x64.Build.0 = Release|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Release|x86.ActiveCfg = Release|Any CPU
+		{EB565914-5C47-41A7-AED8-1264C5013620}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
