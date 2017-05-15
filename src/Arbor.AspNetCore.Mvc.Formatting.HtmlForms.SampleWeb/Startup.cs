@@ -1,11 +1,10 @@
-﻿using System;
-using Arbor.AspNetCore.Formatting.HtmlForms.Core;
+﻿using Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Arbor.AspNetCore.Formatting.HtmlForms.Tests.Integration
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
 {
     public class Startup
     {
@@ -13,21 +12,11 @@ namespace Arbor.AspNetCore.Formatting.HtmlForms.Tests.Integration
 
         public Startup(ILoggerFactory loggerFactory)
         {
-            if (loggerFactory == null)
-            {
-                throw new ArgumentNullException(nameof(loggerFactory));
-            }
-
             _loggerFactory = loggerFactory;
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            if (services == null)
-            {
-                throw new ArgumentNullException(nameof(services));
-            }
-
             services.AddMvc(
                 options =>
                 {
@@ -36,19 +25,18 @@ namespace Arbor.AspNetCore.Formatting.HtmlForms.Tests.Integration
                 });
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            if (app == null)
-            {
-                throw new ArgumentNullException(nameof(app));
-            }
+            loggerFactory.AddConsole();
 
-            if (env == null)
+            if (env.IsDevelopment())
             {
-                throw new ArgumentNullException(nameof(env));
+                app.UseDeveloperExceptionPage();
             }
 
             app.UseMvc();
+
+            app.UseStaticFiles();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Arbor.AspNetCore.Formatting.HtmlForms.Tests.Integration
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
 {
     [Route("")]
     public class TestController : Controller

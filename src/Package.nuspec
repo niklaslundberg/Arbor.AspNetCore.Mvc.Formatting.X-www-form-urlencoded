@@ -7,7 +7,7 @@
     <authors>Niklas Lundberg</authors>
     <owners></owners>
     <description>
-    This packages makes it possible to extract values from a x-www-form-urlencoded http request into .NET poco objects.
+    This packages makes it possible to extract values from a x-www-form-urlencoded or multipart/form-data http request into .NET poco objects.
     </description>
     <releaseNotes>
     </releaseNotes>
@@ -23,9 +23,11 @@
     <dependencies>
       <group targetFramework="netstandard1.6">
         <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[1.1,2.0)" />
+        <dependency id="Arbor.ModelBinding" version="[0.1,2.0)" />
       </group>
       <group targetFramework="net461">
         <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[1.1,2.0)" />
+        <dependency id="Arbor.ModelBinding" version="[0.1,2.0)" />
       </group>
     </dependencies>
     <references></references>
