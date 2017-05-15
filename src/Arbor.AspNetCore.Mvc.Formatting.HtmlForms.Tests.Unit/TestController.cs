@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Arbor.AspnetCore.Mvc.Formatting.HtmlForms.Tests.Integration
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
 {
     [Route("")]
     public class TestController : Controller
     {
         [HttpPost]
         [Route("")]
-        public IActionResult Index([FromBody] SampleClassWithCtor sampleClassWithCtor)
+        public IActionResult Index([FromBody]SampleClassWithCtor sampleClassWithCtor)
         {
             if (string.IsNullOrWhiteSpace(sampleClassWithCtor?.A))
             {
