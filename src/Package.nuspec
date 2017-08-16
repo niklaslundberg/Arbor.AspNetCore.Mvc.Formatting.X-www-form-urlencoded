@@ -22,11 +22,11 @@
     <copyright>Copyright Niklas Lundberg 2017</copyright>
     <dependencies>
       <group targetFramework="netstandard1.6">
-        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[1.1,2.0)" />
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[2.0,3.0)" />
         <dependency id="Arbor.ModelBinding" version="[0.1,2.0)" />
       </group>
       <group targetFramework="net461">
-        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[1.1,2.0)" />
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[2.0,3.0)" />
         <dependency id="Arbor.ModelBinding" version="[0.1,2.0)" />
       </group>
     </dependencies>
@@ -34,7 +34,7 @@
     <tags></tags>
   </metadata>
   <files>
-    <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\netstandard1.6\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\netstandard1.6" />
+    <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\netstandard2.0\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\netstandard1.6" />
     <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\net461\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\net461" />
   </files>
 </package>
