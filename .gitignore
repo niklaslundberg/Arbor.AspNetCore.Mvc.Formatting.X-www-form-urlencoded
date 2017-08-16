@@ -194,3 +194,4 @@ _patchedAssemblyInfos
 *.log
 *.ncrunchproject
 *.ncrunchsolution
+**/nCrunchTemp*.*
