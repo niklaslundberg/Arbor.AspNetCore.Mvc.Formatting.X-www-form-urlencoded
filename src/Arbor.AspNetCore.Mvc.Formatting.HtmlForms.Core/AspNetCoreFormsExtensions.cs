@@ -22,6 +22,11 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
                 throw new ArgumentNullException(nameof(formDataCollection));
             }
 
+            if (targetType == null)
+            {
+                throw new ArgumentNullException(nameof(targetType));
+            }
+
             return ModelBinding.Core.FormsExtensions.ParseFromPairs(formDataCollection, targetType);
         }
     }
