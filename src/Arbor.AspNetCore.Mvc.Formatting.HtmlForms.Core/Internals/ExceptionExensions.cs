@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json;
 
-namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Internals
 {
     internal static class ExceptionExensions
     {
