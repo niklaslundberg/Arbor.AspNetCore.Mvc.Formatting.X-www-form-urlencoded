@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Arbor.AspNetCore.Mvc.Formatting.HtmlForms</id>
-    <version>$version$</version>
+    <version>0.1.0</version>
     <title>Arbor.AspNetCore.Mvc.Formatting.HtmlForms</title>
     <authors>Niklas Lundberg</authors>
     <owners></owners>
@@ -19,7 +19,7 @@
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
-    <copyright>Copyright Niklas Lundberg 2017</copyright>
+    <copyright>Copyright Niklas Lundberg 2018</copyright>
     <dependencies>
       <group targetFramework="netstandard2.0">
         <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[2.1.0,3.0.0)" />
