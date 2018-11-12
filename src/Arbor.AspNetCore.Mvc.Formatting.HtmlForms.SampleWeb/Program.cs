@@ -12,7 +12,6 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
-                .UseApplicationInsights()
                 .Build();
 
             host.Run();

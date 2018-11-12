@@ -8,11 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ErrorProne.NET" Version="0.1.5898.41180" />
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-rc1-final" />
+    <PackageReference Include="Machine.Specifications.Runner.VisualStudio" Version="2.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
     <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
-    <PackageReference Include="xunit" Version="2.3.1" />
-    <PackageReference Include="xunit.analyzers" Version="0.8.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.analyzers" Version="0.10.0" />
   </ItemGroup>
 
   <ItemGroup>
