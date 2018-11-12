@@ -5,15 +5,29 @@
     <title></title>
 </head>
 <body>
-    <form method="post" enctype="multipart/form-data" action="/">
+    <div>
+        <h1>Multipart with forms</h1>
+        <form method="post" enctype="multipart/form-data" action="/">
 
-        File <input type="file" name="theFile" /><br />
+            File <input type="file" name="theFile" /><br />
 
-        A <input type="text" name="a" /><br />
+            A <input type="text" name="a" /><br />
 
-        B <input type="text" name="b" /><br />
+            B <input type="number" min="0" step="1" name="b" /><br />
 
-        <input type="submit" />
-    </form>
+            <input type="submit" />
+        </form>
+    </div>
+
+    <div>
+        <h1>Multiple files</h1>
+        <form method="post" enctype="multipart/form-data" action="/files">
+
+            File 1 <input type="file" name="files" /><br />
+            File 2 <input type="file" name="files" /><br />
+
+            <input type="submit" />
+        </form>
+    </div>
 </body>
 </html>

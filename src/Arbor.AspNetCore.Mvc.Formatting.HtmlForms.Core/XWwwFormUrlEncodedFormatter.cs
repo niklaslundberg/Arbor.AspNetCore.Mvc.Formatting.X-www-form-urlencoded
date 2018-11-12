@@ -38,16 +38,17 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 
             bool isMultipartFormData = IsMultipartContentType(context.HttpContext.Request.ContentType);
 
-            bool hasSupportedContenetType = isXwwwFormUrlEncoded ||
+            bool hasSupportedContentType = isXwwwFormUrlEncoded ||
                                             isMultipartFormData;
 
             TypeInfo typeInfo = context.ModelType.GetTypeInfo();
 
             bool canBeDeserialized = typeInfo.IsClass && !typeInfo.IsAbstract;
 
-            bool canRead = hasSupportedContenetType && canBeDeserialized;
+            bool canRead = hasSupportedContentType && canBeDeserialized;
 
             _logger.LogDebug("x-www-form-url-encoded {isXwwwFormUrlEncoded}, multipart/form-data {isMultipartFormData}, canBeDeserialized {canBeDeserialized}", isXwwwFormUrlEncoded, isMultipartFormData, canBeDeserialized);
+
             return canRead;
         }
 

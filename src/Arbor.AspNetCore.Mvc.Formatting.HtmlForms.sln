@@ -20,6 +20,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspNetCore.Mvc.Format
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit", "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Tests.Unit\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit.csproj", "{A5A16585-AB5F-40BB-9982-9D449B07A6E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbor.AspNetCore.Formatting.Tests.Integration", "Arbor.AspNetCore.Formatting.Tests.Integration\Arbor.AspNetCore.Formatting.Tests.Integration.csproj", "{6A308538-DF98-4368-AF2E-F92F8E897C38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,8 +68,23 @@ Global
 		{A5A16585-AB5F-40BB-9982-9D449B07A6E4}.Release|x64.Build.0 = Release|Any CPU
 		{A5A16585-AB5F-40BB-9982-9D449B07A6E4}.Release|x86.ActiveCfg = Release|Any CPU
 		{A5A16585-AB5F-40BB-9982-9D449B07A6E4}.Release|x86.Build.0 = Release|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Debug|x64.Build.0 = Debug|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Debug|x86.Build.0 = Debug|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Release|x64.ActiveCfg = Release|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Release|x64.Build.0 = Release|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A308538-DF98-4368-AF2E-F92F8E897C38}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C73E3C8-6AAA-44D2-8635-A6626568AA4B}
 	EndGlobalSection
 EndGlobal

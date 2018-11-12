@@ -1,9 +1,9 @@
 using System;
 using Newtonsoft.Json;
 
-namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Internals
 {
-    internal static class ExceptionExensions
+    internal static class ExceptionExtensions
     {
         public static bool ShouldCatch(this Exception ex)
         {
