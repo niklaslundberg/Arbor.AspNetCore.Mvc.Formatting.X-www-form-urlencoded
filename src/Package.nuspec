@@ -14,23 +14,24 @@
     <summary>
 
     </summary>
+    <repository type="git" url="https://github.com/niklaslundberg/Arbor.AspNetCore.Mvc.Formatting.X-www-form-urlencoded" />
     <language>en-US</language>
     <projectUrl>https://github.com/niklaslundberg/Arbor.AspNetCore.Mvc.Formatting.X-www-form-urlencoded</projectUrl>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
-    <copyright>Copyright Niklas Lundberg 2018</copyright>
+    <license type="expression">MIT</license>
+    <copyright>Copyright Niklas Lundberg 2019</copyright>
     <dependencies>
-      <group targetFramework="netstandard2.0">
-        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[2.1.0,3.0.0)" />
+      <group targetFramework="netcoreapp2.1">
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[2.1.0,2.2.0)" />
         <dependency id="Arbor.ModelBinding" version="[0.4.0,2.0.0)" />
       </group>
-      <group targetFramework="net461">
-        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[2.1.0,3.0.0)" />
+      <group targetFramework="netcoreapp2.2">
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[2.1.0,2.3.0)" />
         <dependency id="Arbor.ModelBinding" version="[0.4.0,2.0.0)" />
       </group>
       <group targetFramework="net472">
-        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[2.1.0,3.0.0)" />
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="[2.1.0,2.2.0)" />
         <dependency id="Arbor.ModelBinding" version="[0.4.0,2.0.0)" />
       </group>
     </dependencies>
@@ -38,8 +39,8 @@
     <tags></tags>
   </metadata>
   <files>
-    <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\netstandard2.0\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\netstandard2.0" />
-    <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\net461\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\net461" />
+    <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\netcoreapp2.1\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\netcoreapp2.1" />
+    <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\netcoreapp2.2\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\netcoreapp2.2" />
     <file src="Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\bin\$configuration$\net472\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.dll" target="lib\net472" />
   </files>
 </package>

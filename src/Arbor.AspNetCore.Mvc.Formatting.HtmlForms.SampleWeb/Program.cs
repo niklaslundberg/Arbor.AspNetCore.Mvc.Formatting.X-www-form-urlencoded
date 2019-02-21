@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
@@ -7,10 +8,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
     {
         public static void Main(string[] args)
         {
-            IWebHost host = new WebHostBuilder()
-                .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
+            IWebHost host = WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
 
