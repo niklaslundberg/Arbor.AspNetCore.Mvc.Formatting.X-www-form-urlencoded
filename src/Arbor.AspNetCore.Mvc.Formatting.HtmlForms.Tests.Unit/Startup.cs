@@ -12,12 +12,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
 
         public Startup(ILoggerFactory loggerFactory)
         {
-            if (loggerFactory == null)
-            {
-                throw new ArgumentNullException(nameof(loggerFactory));
-            }
-
-            _loggerFactory = loggerFactory;
+            _loggerFactory = loggerFactory ?? throw new ArgumentNullException(nameof(loggerFactory));
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -35,7 +30,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
                 });
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (app == null)
             {

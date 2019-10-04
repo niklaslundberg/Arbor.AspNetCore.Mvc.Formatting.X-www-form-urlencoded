@@ -7,7 +7,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
     {
         [HttpPost]
         [Route("")]
-        public IActionResult Index([FromBody]SampleClassWithCtor sampleClassWithCtor)
+        public IActionResult Index([FromBody] SampleClassWithCtor sampleClassWithCtor)
         {
             if (string.IsNullOrWhiteSpace(sampleClassWithCtor?.A))
             {

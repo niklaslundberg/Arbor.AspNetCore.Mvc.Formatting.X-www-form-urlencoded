@@ -6,12 +6,10 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
     {
         public FormParseException(string message) : base(message)
         {
-
         }
 
         public FormParseException(string message, Exception ex) : base(message, ex)
         {
-
         }
     }
 }
