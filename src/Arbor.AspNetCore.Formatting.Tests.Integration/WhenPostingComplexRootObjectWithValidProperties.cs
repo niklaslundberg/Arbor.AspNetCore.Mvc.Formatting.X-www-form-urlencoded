@@ -12,10 +12,12 @@ namespace Arbor.AspNetCore.Formatting.Tests.Integration
 {
     public class WhenPostingComplexRootObjectWithValidProperties
     {
-        private static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        private static IWebHost BuildWebHost(string[] args)
+        {
+            return WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
+        }
 
         [Fact]
         public async Task ThenItShouldBindValuesToObjectAndReturnObjectAsJson()

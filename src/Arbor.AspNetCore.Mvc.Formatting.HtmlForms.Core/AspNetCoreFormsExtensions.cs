@@ -1,4 +1,5 @@
 ﻿using System;
+using Arbor.ModelBinding.Core;
 using Microsoft.AspNetCore.Http;
 
 namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
@@ -27,7 +28,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
                 throw new ArgumentNullException(nameof(targetType));
             }
 
-            return ModelBinding.Core.FormsExtensions.ParseFromPairs(formDataCollection, targetType);
+            return FormsExtensions.ParseFromPairs(formDataCollection, targetType);
         }
     }
 }

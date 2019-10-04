@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,8 +29,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
 
         [HttpPost]
         [Route("files")]
-        public IActionResult Files(
-            IEnumerable<IFormFile> files)
+        public IActionResult Files(IEnumerable<IFormFile> files)
         {
             if (files is null || !files.Any())
             {

@@ -2,7 +2,6 @@
 using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Logging;
 
@@ -38,8 +37,8 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 
             bool isMultipartFormData = IsMultipartContentType(context.HttpContext.Request.ContentType);
 
-            bool hasSupportedContentType = isXwwwFormUrlEncoded ||
-                                            isMultipartFormData;
+            bool hasSupportedContentType = isXwwwFormUrlEncoded
+                                           || isMultipartFormData;
 
             TypeInfo typeInfo = context.ModelType.GetTypeInfo();
 
@@ -47,7 +46,11 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 
             bool canRead = hasSupportedContentType && canBeDeserialized;
 
-            _logger.LogDebug("x-www-form-url-encoded {isXwwwFormUrlEncoded}, multipart/form-data {isMultipartFormData}, canBeDeserialized {canBeDeserialized}", isXwwwFormUrlEncoded, isMultipartFormData, canBeDeserialized);
+            _logger.LogDebug(
+                "x-www-form-url-encoded {isXwwwFormUrlEncoded}, multipart/form-data {isMultipartFormData}, canBeDeserialized {canBeDeserialized}",
+                isXwwwFormUrlEncoded,
+                isMultipartFormData,
+                canBeDeserialized);
 
             return canRead;
         }
@@ -61,7 +64,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 
             try
             {
-                context.HttpContext.Request.EnableRewind();
+                context.HttpContext.Request.EnableBuffering();
                 IFormCollection form = await context.HttpContext.Request.ReadFormAsync();
                 object model = form.ParseFromCollection(context.ModelType);
 
