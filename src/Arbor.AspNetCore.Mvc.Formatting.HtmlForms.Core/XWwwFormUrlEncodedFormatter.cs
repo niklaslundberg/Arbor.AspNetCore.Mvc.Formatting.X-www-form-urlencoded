@@ -10,7 +10,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
     public class XWwwFormUrlEncodedFormatter : IInputFormatter
     {
         private const string ApplicationXWwwFormUrlencoded = "application/x-www-form-urlencoded";
-        private const string FormData = "multipart/form-data";
+
         private readonly ILogger _logger;
 
         public XWwwFormUrlEncodedFormatter(ILogger<XWwwFormUrlEncodedFormatter> logger)

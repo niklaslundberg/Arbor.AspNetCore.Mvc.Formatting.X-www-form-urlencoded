@@ -6,7 +6,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 {
     public static class AspNetCoreFormsExtensions
     {
-        public static T ParseFromCollection<T>(this IFormCollection formDataCollection) where T : class
+        public static T? ParseFromCollection<T>(this IFormCollection formDataCollection) where T : class
         {
             if (formDataCollection == null)
             {

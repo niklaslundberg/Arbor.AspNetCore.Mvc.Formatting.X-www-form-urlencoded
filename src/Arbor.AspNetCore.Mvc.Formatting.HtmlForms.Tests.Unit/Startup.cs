@@ -22,6 +22,8 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
                 throw new ArgumentNullException(nameof(services));
             }
 
+            services.AddControllers();
+
             services.AddMvc(
                 options =>
                 {
@@ -42,7 +44,9 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
                 throw new ArgumentNullException(nameof(env));
             }
 
-            app.UseMvc();
+            app.UseRouting();
+
+            app.UseEndpoints(options => options.MapControllers());
         }
     }
 }
