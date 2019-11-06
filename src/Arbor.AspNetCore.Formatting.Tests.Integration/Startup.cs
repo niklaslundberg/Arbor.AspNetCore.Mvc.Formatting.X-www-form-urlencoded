@@ -10,11 +10,9 @@ namespace Arbor.AspNetCore.Formatting.Tests.Integration
 {
     public class Startup
     {
-        private readonly ILoggerFactory _loggerFactory;
 
-        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
+        public Startup(IConfiguration configuration)
         {
-            _loggerFactory = loggerFactory;
             Configuration = configuration;
         }
 
@@ -25,8 +23,7 @@ namespace Arbor.AspNetCore.Formatting.Tests.Integration
         {
             services.AddMvc();
 
-            ILogger<XWwwFormUrlEncodedFormatter> logger = _loggerFactory.CreateLogger<XWwwFormUrlEncodedFormatter>();
-            var xWwwFormUrlEncodedFormatter = new XWwwFormUrlEncodedFormatter(logger);
+            var xWwwFormUrlEncodedFormatter = new XWwwFormUrlEncodedFormatter();
 
 
             services.AddMvc(options => { options.InputFormatters.Insert(0, xWwwFormUrlEncodedFormatter); });
