@@ -51,10 +51,10 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
             bool canRead = hasSupportedContentType && canBeDeserialized;
 
             logger?.LogDebug(
-                "x-www-form-url-encoded {isXwwwFormUrlEncoded}, multipart/form-data {isMultipartFormData}, canBeDeserialized {canBeDeserialized}",
+                "x-www-form-url-encoded {IsXwwwFormUrlEncoded}, multipart/form-data {IsMultipartFormData}, canRead {CanRead}",
                 isXwwwFormUrlEncoded,
                 isMultipartFormData,
-                canBeDeserialized);
+                canRead);
 
             return canRead;
         }
