@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Formatters;
@@ -14,7 +15,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 
         public static bool IsMultipartContentType(string contentType)
         {
-            return !string.IsNullOrEmpty(contentType)
+            return !string.IsNullOrWhiteSpace(contentType)
                    && contentType.IndexOf("multipart/", StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
@@ -27,11 +28,18 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 
             var logger = GetLogger(context);
 
-            bool isXwwwFormUrlEncoded = context.HttpContext.Request.ContentType.Equals(
+            string requestContentType = context.HttpContext.Request.ContentType;
+
+            if (string.IsNullOrWhiteSpace(requestContentType))
+            {
+                return false;
+            }
+
+            bool isXwwwFormUrlEncoded = requestContentType.Equals(
                 ApplicationXWwwFormUrlencoded,
                 StringComparison.OrdinalIgnoreCase);
 
-            bool isMultipartFormData = IsMultipartContentType(context.HttpContext.Request.ContentType);
+            bool isMultipartFormData = IsMultipartContentType(requestContentType);
 
             bool hasSupportedContentType = isXwwwFormUrlEncoded
                                            || isMultipartFormData;
