@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.csproj" />
+    <ProjectReference Include="..\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.csproj" />
   </ItemGroup>
 
 </Project>

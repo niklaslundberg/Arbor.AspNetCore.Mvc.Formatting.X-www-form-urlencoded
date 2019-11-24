@@ -14,10 +14,10 @@
     <PackageReference Include="serilog.sinks.console" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.csproj" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <ProjectReference Include="..\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.csproj" />
   </ItemGroup>
 
 </Project>
