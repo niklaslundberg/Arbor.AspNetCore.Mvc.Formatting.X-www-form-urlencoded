@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Formatters;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 {
@@ -13,11 +13,9 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
     {
         private const string ApplicationXWwwFormUrlencoded = "application/x-www-form-urlencoded";
 
-        public static bool IsMultipartContentType(string contentType)
-        {
-            return !string.IsNullOrWhiteSpace(contentType)
-                   && contentType.IndexOf("multipart/", StringComparison.OrdinalIgnoreCase) >= 0;
-        }
+        public static bool IsMultipartContentType(string contentType) =>
+            !string.IsNullOrWhiteSpace(contentType)
+            && contentType.IndexOf("multipart/", StringComparison.OrdinalIgnoreCase) >= 0;
 
         public bool CanRead(InputFormatterContext context)
         {
@@ -59,12 +57,6 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
             return canRead;
         }
 
-        private static ILogger<XWwwFormUrlEncodedFormatter> GetLogger(InputFormatterContext context)
-        {
-            var logger = context.HttpContext.RequestServices.GetService<ILogger<XWwwFormUrlEncodedFormatter>>();
-            return logger;
-        }
-
         public async Task<InputFormatterResult> ReadAsync(InputFormatterContext context)
         {
             if (context == null)
@@ -86,6 +78,12 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
                 logger?.LogError(new EventId(1000), ex, "Could not create type {ModelType}", context.ModelType.Name);
                 return InputFormatterResult.Failure();
             }
+        }
+
+        private static ILogger<XWwwFormUrlEncodedFormatter> GetLogger(InputFormatterContext context)
+        {
+            var logger = context.HttpContext.RequestServices.GetService<ILogger<XWwwFormUrlEncodedFormatter>>();
+            return logger;
         }
     }
 }
