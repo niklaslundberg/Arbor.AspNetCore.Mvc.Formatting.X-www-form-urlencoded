@@ -4,9 +4,9 @@
     ".NETCoreApp,Version=v3.0": {
       "Arbor.ModelBinding": {
         "type": "Direct",
-        "requested": "[0.7.0, )",
-        "resolved": "0.7.0",
-        "contentHash": "q1snL4cXLmo4EogoGmOoWtozsPGa6btexvhleZ7TShhSSYKf/bzsj3QOhgqc5G/TmDLN1Th8NFoh6fjOLlN2rQ==",
+        "requested": "[0.7.1, )",
+        "resolved": "0.7.1",
+        "contentHash": "Lbei+NojkETF3lPRci+m8CsrcEdbn0+IlhaTpvWgIGhKsS6E0c1fnOBF7AdBY1XF2vJYL1sM7MG4JhQvj3/7nQ==",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "[3.0.0, 4.0.0)",
           "Newtonsoft.Json": "12.0.1"
