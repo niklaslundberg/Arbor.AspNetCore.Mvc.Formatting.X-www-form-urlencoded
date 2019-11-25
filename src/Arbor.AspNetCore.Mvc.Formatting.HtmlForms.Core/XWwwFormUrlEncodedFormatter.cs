@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Reflection;
 using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
@@ -10,19 +12,10 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
     public class XWwwFormUrlEncodedFormatter : IInputFormatter
     {
         private const string ApplicationXWwwFormUrlencoded = "application/x-www-form-urlencoded";
-        private const string FormData = "multipart/form-data";
-        private readonly ILogger _logger;
 
-        public XWwwFormUrlEncodedFormatter(ILogger<XWwwFormUrlEncodedFormatter> logger)
-        {
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        }
-
-        public static bool IsMultipartContentType(string contentType)
-        {
-            return !string.IsNullOrEmpty(contentType)
-                   && contentType.IndexOf("multipart/", StringComparison.OrdinalIgnoreCase) >= 0;
-        }
+        public static bool IsMultipartContentType(string contentType) =>
+            !string.IsNullOrWhiteSpace(contentType)
+            && contentType.IndexOf("multipart/", StringComparison.OrdinalIgnoreCase) >= 0;
 
         public bool CanRead(InputFormatterContext context)
         {
@@ -31,11 +24,20 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
                 throw new ArgumentNullException(nameof(context));
             }
 
-            bool isXwwwFormUrlEncoded = context.HttpContext.Request.ContentType.Equals(
+            var logger = GetLogger(context);
+
+            string requestContentType = context.HttpContext.Request.ContentType;
+
+            if (string.IsNullOrWhiteSpace(requestContentType))
+            {
+                return false;
+            }
+
+            bool isXwwwFormUrlEncoded = requestContentType.Equals(
                 ApplicationXWwwFormUrlencoded,
                 StringComparison.OrdinalIgnoreCase);
 
-            bool isMultipartFormData = IsMultipartContentType(context.HttpContext.Request.ContentType);
+            bool isMultipartFormData = IsMultipartContentType(requestContentType);
 
             bool hasSupportedContentType = isXwwwFormUrlEncoded
                                            || isMultipartFormData;
@@ -46,11 +48,11 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
 
             bool canRead = hasSupportedContentType && canBeDeserialized;
 
-            _logger.LogDebug(
-                "x-www-form-url-encoded {isXwwwFormUrlEncoded}, multipart/form-data {isMultipartFormData}, canBeDeserialized {canBeDeserialized}",
+            logger?.LogDebug(
+                "x-www-form-url-encoded {IsXwwwFormUrlEncoded}, multipart/form-data {IsMultipartFormData}, canRead {CanRead}",
                 isXwwwFormUrlEncoded,
                 isMultipartFormData,
-                canBeDeserialized);
+                canRead);
 
             return canRead;
         }
@@ -72,9 +74,16 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
             }
             catch (Exception ex)
             {
-                _logger.LogError(new EventId(1000), ex, "Could not create type {ModelType}", context.ModelType.Name);
+                var logger = GetLogger(context);
+                logger?.LogError(new EventId(1000), ex, "Could not create type {ModelType}", context.ModelType.Name);
                 return InputFormatterResult.Failure();
             }
+        }
+
+        private static ILogger<XWwwFormUrlEncodedFormatter> GetLogger(InputFormatterContext context)
+        {
+            var logger = context.HttpContext.RequestServices.GetService<ILogger<XWwwFormUrlEncodedFormatter>>();
+            return logger;
         }
     }
 }

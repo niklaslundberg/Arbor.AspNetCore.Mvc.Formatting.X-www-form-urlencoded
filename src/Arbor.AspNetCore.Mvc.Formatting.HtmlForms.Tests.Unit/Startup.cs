@@ -8,13 +8,6 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
 {
     public class Startup
     {
-        private readonly ILoggerFactory _loggerFactory;
-
-        public Startup(ILoggerFactory loggerFactory)
-        {
-            _loggerFactory = loggerFactory ?? throw new ArgumentNullException(nameof(loggerFactory));
-        }
-
         public void ConfigureServices(IServiceCollection services)
         {
             if (services == null)
@@ -22,11 +15,13 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
                 throw new ArgumentNullException(nameof(services));
             }
 
+            services.AddControllers();
+
             services.AddMvc(
                 options =>
                 {
                     options.InputFormatters.Add(
-                        new XWwwFormUrlEncodedFormatter(_loggerFactory.CreateLogger<XWwwFormUrlEncodedFormatter>()));
+                        new XWwwFormUrlEncodedFormatter());
                 });
         }
 
@@ -42,7 +37,9 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit
                 throw new ArgumentNullException(nameof(env));
             }
 
-            app.UseMvc();
+            app.UseRouting();
+
+            app.UseEndpoints(options => options.MapControllers());
         }
     }
 }

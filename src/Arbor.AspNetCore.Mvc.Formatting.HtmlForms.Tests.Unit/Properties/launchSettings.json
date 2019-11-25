@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:50484/",
+      "applicationUrl": "http://localhost:64671/",
       "sslPort": 0
     }
   },
@@ -15,13 +15,13 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb": {
+    "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:5029/"
+      "applicationUrl": "http://localhost:64672/"
     }
   }
 }
