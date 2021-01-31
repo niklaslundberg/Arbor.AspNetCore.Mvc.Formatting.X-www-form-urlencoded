@@ -1,14 +1,14 @@
 {
   "version": 1,
   "dependencies": {
-    ".NETCoreApp,Version=v3.0": {
+    ".NETCoreApp,Version=v3.1": {
       "Arbor.ModelBinding": {
         "type": "Direct",
-        "requested": "[0.7.1, )",
-        "resolved": "0.7.1",
-        "contentHash": "Lbei+NojkETF3lPRci+m8CsrcEdbn0+IlhaTpvWgIGhKsS6E0c1fnOBF7AdBY1XF2vJYL1sM7MG4JhQvj3/7nQ==",
+        "requested": "[1.0.0-build.1597409737, )",
+        "resolved": "1.0.0-build.1597409737",
+        "contentHash": "X6xs40G5ADiBTpbJ6LcI2bVeu77x8joyd9aG4Tnx8o11BnrNfkEDsgtDk+q1t4OjArJVJ9OYujqKBCAJ8s/83Q==",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "[3.0.0, 4.0.0)",
+          "Microsoft.Extensions.Primitives": "[3.0.0, 6.0.0)",
           "Newtonsoft.Json": "12.0.1"
         }
       },
@@ -24,6 +24,14 @@
         "resolved": "3.0.1",
         "contentHash": "9RIADJEXOk3R2rQunxzFxQEazaD3FNOqCNed+yVf/U0HDbbkQcwsWOHrju1YwdQwtewt/0WRUYxRDf3USxezdA=="
       },
+      "Newtonsoft.Json": {
+        "type": "Direct",
+        "requested": "[12.0.3, )",
+        "resolved": "12.0.3",
+        "contentHash": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg=="
+      }
+    },
+    "net5.0": {
       "Newtonsoft.Json": {
         "type": "Direct",
         "requested": "[12.0.3, )",
