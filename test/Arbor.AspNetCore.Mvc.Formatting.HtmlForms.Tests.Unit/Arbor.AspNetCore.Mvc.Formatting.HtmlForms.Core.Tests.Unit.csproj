@@ -3,7 +3,7 @@
     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Arbor.ModelBinding" Version="1.0.0-build.1597409737" />
+    <PackageReference Include="Arbor.ModelBinding" Version="1.0.0" />
     <PackageReference Include="Machine.Specifications.Runner.VisualStudio" Version="2.9.0" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.0.0" />
     <PackageReference Include="Machine.Specifications" Version="1.0.0" />

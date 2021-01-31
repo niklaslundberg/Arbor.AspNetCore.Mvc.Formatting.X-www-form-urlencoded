@@ -12,8 +12,8 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Arbor.ModelBinding" Version="1.0.0-build.1597409737" Condition="'$(TargetFramework)' == 'netcoreapp3.1'" />
-    <PackageReference Include="Arbor.ModelBinding" Version="1.0.0-build.1597409737" Condition="'$(TargetFramework)' == 'net5.0'" />
+    <PackageReference Include="Arbor.ModelBinding" Version="1.0.0" Condition="'$(TargetFramework)' == 'netcoreapp3.1'" />
+    <PackageReference Include="Arbor.ModelBinding" Version="1.0.0" Condition="'$(TargetFramework)' == 'net5.0'" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.0.1" Condition="'$(TargetFramework)' == 'netcoreapp3.1'" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0-preview.7.20364.11" Condition="'$(TargetFramework)' == 'net5.0'" />
     <PackageReference Include="Microsoft.Extensions.Primitives" Version="3.0.1" Condition="'$(TargetFramework)' == 'netcoreapp3.1'" />
