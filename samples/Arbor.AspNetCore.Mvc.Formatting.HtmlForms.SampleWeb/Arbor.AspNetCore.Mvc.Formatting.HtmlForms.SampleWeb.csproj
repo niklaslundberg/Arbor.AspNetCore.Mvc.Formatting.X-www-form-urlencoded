@@ -4,6 +4,10 @@
     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <ArborPublishEnabled>false</ArborPublishEnabled>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Include="wwwroot\Index.html" />
   </ItemGroup>
