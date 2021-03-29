@@ -1,4 +1,4 @@
-﻿using Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core;
+﻿using Arbor.AspNetCore.Mvc.Formatting.HtmlForms;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

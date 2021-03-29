@@ -1,4 +1,4 @@
-﻿namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit.ComplexTypes
+﻿namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
 {
     public class SubType
     {

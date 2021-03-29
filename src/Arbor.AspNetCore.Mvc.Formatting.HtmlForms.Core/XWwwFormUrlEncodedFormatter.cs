@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Reflection;
 using System.Threading.Tasks;
-
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms
 {
     public class XWwwFormUrlEncodedFormatter : IInputFormatter
     {

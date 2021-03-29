@@ -5,12 +5,12 @@
   <ItemGroup>
     <PackageReference Include="Arbor.ModelBinding" Version="1.0.1" />
     <PackageReference Include="Machine.Specifications.Runner.VisualStudio" Version="2.10.1" />
-    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="5.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="5.0.4" />
     <PackageReference Include="Machine.Specifications" Version="1.0.0" />
     <PackageReference Include="Machine.Specifications.Should" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Primitives" Version="5.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.csproj" />

@@ -2,7 +2,7 @@
 using Arbor.ModelBinding.Core;
 using Microsoft.AspNetCore.Http;
 
-namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms
 {
     public static class AspNetCoreFormsExtensions
     {
