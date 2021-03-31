@@ -4,20 +4,20 @@
     ".NETCoreApp,Version=v3.1": {
       "Arbor.ModelBinding": {
         "type": "Direct",
-        "requested": "[1.1.0-build.1617179573.systemtextjson, )",
-        "resolved": "1.1.0-build.1617179573.systemtextjson",
-        "contentHash": "Zix8uQQRd6SxwF2fN8228ClafxwyY9L2+pYM9JTmn1np2TTScsLzDlv+TNqyrLssJP8e6Ov1Ie0UPdPd1TrONw==",
+        "requested": "[1.1.0-build.1617179722.systemtextjson, )",
+        "resolved": "1.1.0-build.1617179722.systemtextjson",
+        "contentHash": "PaWzOJQfjM7HvPnAAv4O7UjQJ8mPrkH3Yvn6hoRuGiMKiHGrFz+3tim4h8/7+MGdU8dO6jEOVJ7Q07O0JOEGgQ==",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "5.0.0"
         }
       },
       "Arbor.ModelBinding.NewtonsoftJson": {
         "type": "Direct",
-        "requested": "[1.1.0-build.1617179573.systemtextjson, )",
-        "resolved": "1.1.0-build.1617179573.systemtextjson",
-        "contentHash": "2AQ5+8l+ZOB3vIxeCNJnJv0Lu5bgB6fyBhh+oyT0gRJLCptIQPV64Tz9Aj3aYTLd1J3pDZ9IG/Im0QEWxZBofw==",
+        "requested": "[1.1.0-build.1617179722.systemtextjson, )",
+        "resolved": "1.1.0-build.1617179722.systemtextjson",
+        "contentHash": "MjdWURlBwqEt/NeH7zyjuYFXelWTZOFSBlPRTwf4MQ88nsmAhtuGV2wT0PXXI94K+RfDLBfve8sNTZy6TTUF1Q==",
         "dependencies": {
-          "Arbor.ModelBinding": "1.1.0-build.1617179573.systemtextjson",
+          "Arbor.ModelBinding": "1.1.0-build.1617179722.systemtextjson",
           "Microsoft.Extensions.Primitives": "5.0.0",
           "Newtonsoft.Json": "13.0.1"
         }
@@ -44,20 +44,20 @@
     ".NETCoreApp,Version=v5.0": {
       "Arbor.ModelBinding": {
         "type": "Direct",
-        "requested": "[1.1.0-build.1617179573.systemtextjson, )",
-        "resolved": "1.1.0-build.1617179573.systemtextjson",
-        "contentHash": "Zix8uQQRd6SxwF2fN8228ClafxwyY9L2+pYM9JTmn1np2TTScsLzDlv+TNqyrLssJP8e6Ov1Ie0UPdPd1TrONw==",
+        "requested": "[1.1.0-build.1617179722.systemtextjson, )",
+        "resolved": "1.1.0-build.1617179722.systemtextjson",
+        "contentHash": "PaWzOJQfjM7HvPnAAv4O7UjQJ8mPrkH3Yvn6hoRuGiMKiHGrFz+3tim4h8/7+MGdU8dO6jEOVJ7Q07O0JOEGgQ==",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "5.0.0"
         }
       },
       "Arbor.ModelBinding.NewtonsoftJson": {
         "type": "Direct",
-        "requested": "[1.1.0-build.1617179573.systemtextjson, )",
-        "resolved": "1.1.0-build.1617179573.systemtextjson",
-        "contentHash": "2AQ5+8l+ZOB3vIxeCNJnJv0Lu5bgB6fyBhh+oyT0gRJLCptIQPV64Tz9Aj3aYTLd1J3pDZ9IG/Im0QEWxZBofw==",
+        "requested": "[1.1.0-build.1617179722.systemtextjson, )",
+        "resolved": "1.1.0-build.1617179722.systemtextjson",
+        "contentHash": "MjdWURlBwqEt/NeH7zyjuYFXelWTZOFSBlPRTwf4MQ88nsmAhtuGV2wT0PXXI94K+RfDLBfve8sNTZy6TTUF1Q==",
         "dependencies": {
-          "Arbor.ModelBinding": "1.1.0-build.1617179573.systemtextjson",
+          "Arbor.ModelBinding": "1.1.0-build.1617179722.systemtextjson",
           "Microsoft.Extensions.Primitives": "5.0.0",
           "Newtonsoft.Json": "13.0.1"
         }
