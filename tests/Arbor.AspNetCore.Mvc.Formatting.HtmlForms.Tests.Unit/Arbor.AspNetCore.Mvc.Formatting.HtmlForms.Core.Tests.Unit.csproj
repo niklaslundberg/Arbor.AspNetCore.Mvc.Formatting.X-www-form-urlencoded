@@ -3,7 +3,6 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Arbor.ModelBinding" Version="1.0.1" />
     <PackageReference Include="Machine.Specifications.Runner.VisualStudio" Version="2.10.1" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="5.0.4" />
     <PackageReference Include="Machine.Specifications" Version="1.0.0" />
@@ -14,5 +13,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="*.ncrunchproject" />
   </ItemGroup>
 </Project>

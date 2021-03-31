@@ -14,6 +14,6 @@ namespace Arbor.AspNetCore.Formatting.Tests.Integration
 
         public int SubOtherProperty { get; }
 
-        public ICollection<SubListItem> SubListItems { get; set; }
+        public ICollection<SubListItem>? SubListItems { get; set; }
     }
 }

@@ -14,6 +14,6 @@ namespace Arbor.AspNetCore.Formatting.Tests.Integration
 
         public int RootOtherProperty { get; }
 
-        public ICollection<SubComplexType> SubTypes { get; set; }
+        public ICollection<SubComplexType>? SubTypes { get; set; }
     }
 }

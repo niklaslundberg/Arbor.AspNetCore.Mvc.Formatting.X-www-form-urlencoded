@@ -14,6 +14,6 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit.ComplexTypes
 
         public int RootOtherProperty { get; }
 
-        public ICollection<SubComplexType> SubTypes { get; set; }
+        public ICollection<SubComplexType>? SubTypes { get; set; }
     }
 }

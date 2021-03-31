@@ -51,11 +51,21 @@
       },
       "Arbor.ModelBinding": {
         "type": "Transitive",
-        "resolved": "1.0.1",
-        "contentHash": "P7+q15VgARzsS06JsWmJkongwRjNCy1z8sz9qUmLk6AoK6fvpHouwaYBawPDOeZDZ+ryOS7647UuxwIdXC7Tjw==",
+        "resolved": "1.1.0-build.1617177931.systemtextjson",
+        "contentHash": "Lh5kzXNvDUEDOxXSACOwKomf5LWPqPlx2TScs2FXU5TednfI/KLbXOfA6Z49K5SdMPgS7oZye6ZQow5/xGn0GA==",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "[5.0.0, 6.0.0)",
           "Newtonsoft.Json": "12.0.1"
+        }
+      },
+      "Arbor.ModelBinding.NewtonsoftJson": {
+        "type": "Transitive",
+        "resolved": "1.1.0-build.1617177931.systemtextjson",
+        "contentHash": "VdTAyFZwSwavMH9BSeDZZfSdEVdprVA4UeMMsyUiowcjZlYEeVGWpHxq942DRNq16dC1dW4DAU4c1kUVp5DB+w==",
+        "dependencies": {
+          "Arbor.ModelBinding": "1.1.0-build.1617177931.systemtextjson",
+          "Microsoft.Extensions.Primitives": "5.0.0",
+          "Newtonsoft.Json": "13.0.1"
         }
       },
       "Microsoft.DotNet.PlatformAbstractions": {
@@ -605,7 +615,8 @@
       "arbor.aspnetcore.mvc.formatting.htmlforms": {
         "type": "Project",
         "dependencies": {
-          "Arbor.ModelBinding": "1.0.1",
+          "Arbor.ModelBinding": "1.1.0-build.1617177931.systemtextjson",
+          "Arbor.ModelBinding.NewtonsoftJson": "1.1.0-build.1617177931.systemtextjson",
           "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
           "Microsoft.Extensions.Primitives": "5.0.0",
           "Newtonsoft.Json": "13.0.1"

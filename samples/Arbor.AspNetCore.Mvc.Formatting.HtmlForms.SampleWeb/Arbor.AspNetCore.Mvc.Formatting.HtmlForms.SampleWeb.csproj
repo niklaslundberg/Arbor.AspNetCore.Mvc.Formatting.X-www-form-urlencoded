@@ -25,4 +25,8 @@
     <ProjectReference Include="..\..\src\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="*.ncrunchproject" />
+  </ItemGroup>
+
 </Project>

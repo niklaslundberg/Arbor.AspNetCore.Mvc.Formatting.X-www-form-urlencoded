@@ -5,11 +5,11 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit.ComplexTypes
 {
     public class ItemWithServices
     {
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         public int NumberOfItems { get; set; }
 
-        public List<Service> Services { get; set; }
+        public List<Service>? Services { get; set; }
 
         public override string ToString()
         {

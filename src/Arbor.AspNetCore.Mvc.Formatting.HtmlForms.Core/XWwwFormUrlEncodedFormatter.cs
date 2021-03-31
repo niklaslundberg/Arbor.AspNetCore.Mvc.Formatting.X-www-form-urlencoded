@@ -56,30 +56,39 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms
             return canRead;
         }
 
-        public async Task<InputFormatterResult> ReadAsync(InputFormatterContext context)
+        public Task<InputFormatterResult> ReadAsync(InputFormatterContext context)
         {
             if (context == null)
             {
                 throw new ArgumentNullException(nameof(context));
             }
 
+            return ReadInternalAsync(context);
+        }
+        private async Task<InputFormatterResult> ReadInternalAsync(InputFormatterContext context)
+        {
             try
             {
                 context.HttpContext.Request.EnableBuffering();
                 IFormCollection form = await context.HttpContext.Request.ReadFormAsync();
-                object model = form.ParseFromCollection(context.ModelType);
+                object? model = form.ParseFromCollection(context.ModelType);
 
-                return InputFormatterResult.Success(model);
+                if (model is null)
+                {
+                    return await InputFormatterResult.FailureAsync();
+                }
+
+                return await InputFormatterResult.SuccessAsync(model);
             }
             catch (Exception ex)
             {
                 var logger = GetLogger(context);
-                logger?.LogError(new EventId(1000), ex, "Could not create type {ModelType}", context.ModelType.Name);
-                return InputFormatterResult.Failure();
+                logger.LogError(new EventId(1000), ex, "Could not create type {ModelType}", context.ModelType.Name);
+                return await InputFormatterResult.FailureAsync();
             }
         }
 
-        private static ILogger<XWwwFormUrlEncodedFormatter> GetLogger(InputFormatterContext context)
+        private static ILogger<XWwwFormUrlEncodedFormatter>? GetLogger(InputFormatterContext context)
         {
             var logger = context.HttpContext.RequestServices.GetService<ILogger<XWwwFormUrlEncodedFormatter>>();
             return logger;

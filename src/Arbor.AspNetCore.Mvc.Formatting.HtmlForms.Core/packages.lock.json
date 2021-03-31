@@ -4,12 +4,23 @@
     ".NETCoreApp,Version=v3.1": {
       "Arbor.ModelBinding": {
         "type": "Direct",
-        "requested": "[1.0.1, )",
-        "resolved": "1.0.1",
-        "contentHash": "P7+q15VgARzsS06JsWmJkongwRjNCy1z8sz9qUmLk6AoK6fvpHouwaYBawPDOeZDZ+ryOS7647UuxwIdXC7Tjw==",
+        "requested": "[1.1.0-build.1617177931.systemtextjson, )",
+        "resolved": "1.1.0-build.1617177931.systemtextjson",
+        "contentHash": "Lh5kzXNvDUEDOxXSACOwKomf5LWPqPlx2TScs2FXU5TednfI/KLbXOfA6Z49K5SdMPgS7oZye6ZQow5/xGn0GA==",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "[3.0.0, 6.0.0)",
           "Newtonsoft.Json": "12.0.1"
+        }
+      },
+      "Arbor.ModelBinding.NewtonsoftJson": {
+        "type": "Direct",
+        "requested": "[1.1.0-build.1617177931.systemtextjson, )",
+        "resolved": "1.1.0-build.1617177931.systemtextjson",
+        "contentHash": "VdTAyFZwSwavMH9BSeDZZfSdEVdprVA4UeMMsyUiowcjZlYEeVGWpHxq942DRNq16dC1dW4DAU4c1kUVp5DB+w==",
+        "dependencies": {
+          "Arbor.ModelBinding": "1.1.0-build.1617177931.systemtextjson",
+          "Microsoft.Extensions.Primitives": "5.0.0",
+          "Newtonsoft.Json": "13.0.1"
         }
       },
       "Microsoft.Extensions.Logging.Abstractions": {
@@ -34,12 +45,23 @@
     ".NETCoreApp,Version=v5.0": {
       "Arbor.ModelBinding": {
         "type": "Direct",
-        "requested": "[1.0.1, )",
-        "resolved": "1.0.1",
-        "contentHash": "P7+q15VgARzsS06JsWmJkongwRjNCy1z8sz9qUmLk6AoK6fvpHouwaYBawPDOeZDZ+ryOS7647UuxwIdXC7Tjw==",
+        "requested": "[1.1.0-build.1617177931.systemtextjson, )",
+        "resolved": "1.1.0-build.1617177931.systemtextjson",
+        "contentHash": "Lh5kzXNvDUEDOxXSACOwKomf5LWPqPlx2TScs2FXU5TednfI/KLbXOfA6Z49K5SdMPgS7oZye6ZQow5/xGn0GA==",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "[5.0.0, 6.0.0)",
           "Newtonsoft.Json": "12.0.1"
+        }
+      },
+      "Arbor.ModelBinding.NewtonsoftJson": {
+        "type": "Direct",
+        "requested": "[1.1.0-build.1617177931.systemtextjson, )",
+        "resolved": "1.1.0-build.1617177931.systemtextjson",
+        "contentHash": "VdTAyFZwSwavMH9BSeDZZfSdEVdprVA4UeMMsyUiowcjZlYEeVGWpHxq942DRNq16dC1dW4DAU4c1kUVp5DB+w==",
+        "dependencies": {
+          "Arbor.ModelBinding": "1.1.0-build.1617177931.systemtextjson",
+          "Microsoft.Extensions.Primitives": "5.0.0",
+          "Newtonsoft.Json": "13.0.1"
         }
       },
       "Microsoft.Extensions.Logging.Abstractions": {
