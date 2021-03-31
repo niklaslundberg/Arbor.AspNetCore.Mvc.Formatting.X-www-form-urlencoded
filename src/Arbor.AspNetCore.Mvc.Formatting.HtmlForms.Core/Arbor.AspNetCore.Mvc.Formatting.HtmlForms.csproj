@@ -15,8 +15,8 @@
     <None Remove="*.ncrunchproject" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Arbor.ModelBinding" Version="1.1.0-build.1617177931.systemtextjson" />
-    <PackageReference Include="Arbor.ModelBinding.NewtonsoftJson" Version="1.1.0-build.1617177931.systemtextjson" />
+    <PackageReference Include="Arbor.ModelBinding" Version="1.1.0-build.1617179573.systemtextjson" />
+    <PackageReference Include="Arbor.ModelBinding.NewtonsoftJson" Version="1.1.0-build.1617179573.systemtextjson" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Primitives" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
