@@ -4,12 +4,22 @@
     ".NETCoreApp,Version=v3.1": {
       "Arbor.ModelBinding": {
         "type": "Direct",
-        "requested": "[1.0.1, )",
-        "resolved": "1.0.1",
-        "contentHash": "P7+q15VgARzsS06JsWmJkongwRjNCy1z8sz9qUmLk6AoK6fvpHouwaYBawPDOeZDZ+ryOS7647UuxwIdXC7Tjw==",
+        "requested": "[2.0.0, )",
+        "resolved": "2.0.0",
+        "contentHash": "WiHEdURYTlo9fl/vun1d5fnbvqjv5MZaqkYX1XxBrGz7CN0JmQdCaerNpEurWIVLKbWo8uri3vPVDE8oD9UMEQ==",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "[3.0.0, 6.0.0)",
-          "Newtonsoft.Json": "12.0.1"
+          "Microsoft.Extensions.Primitives": "5.0.1"
+        }
+      },
+      "Arbor.ModelBinding.NewtonsoftJson": {
+        "type": "Direct",
+        "requested": "[2.0.0, )",
+        "resolved": "2.0.0",
+        "contentHash": "XEfnFkeG50exlFMyBh5HfYeh/vl4YWgmtfoLtBRNgM/fTNCSGMYJ1o0tJtUfFg1M78D5sPyz/+TrYXcT+qUthA==",
+        "dependencies": {
+          "Arbor.ModelBinding": "2.0.0",
+          "Microsoft.Extensions.Primitives": "5.0.1",
+          "Newtonsoft.Json": "13.0.1"
         }
       },
       "Microsoft.Extensions.Logging.Abstractions": {
@@ -20,26 +30,44 @@
       },
       "Microsoft.Extensions.Primitives": {
         "type": "Direct",
-        "requested": "[5.0.0, )",
-        "resolved": "5.0.0",
-        "contentHash": "cI/VWn9G1fghXrNDagX9nYaaB/nokkZn0HYAawGaELQrl8InSezfe9OnfPZLcJq3esXxygh3hkq2c3qoV3SDyQ=="
+        "requested": "[5.0.1, )",
+        "resolved": "5.0.1",
+        "contentHash": "5WPSmL4YeP7eW+Vc8XZ4DwjYWBAiSwDV9Hm63JJWcz1Ie3Xjv4KuJXzgCstj48LkLfVCYa7mLcx7y+q6yqVvtw==",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+        }
       },
       "Newtonsoft.Json": {
         "type": "Direct",
-        "requested": "[12.0.3, )",
-        "resolved": "12.0.3",
-        "contentHash": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg=="
+        "requested": "[13.0.1, )",
+        "resolved": "13.0.1",
+        "contentHash": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A=="
+      },
+      "System.Runtime.CompilerServices.Unsafe": {
+        "type": "Transitive",
+        "resolved": "5.0.0",
+        "contentHash": "ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA=="
       }
     },
     ".NETCoreApp,Version=v5.0": {
       "Arbor.ModelBinding": {
         "type": "Direct",
-        "requested": "[1.0.1, )",
-        "resolved": "1.0.1",
-        "contentHash": "P7+q15VgARzsS06JsWmJkongwRjNCy1z8sz9qUmLk6AoK6fvpHouwaYBawPDOeZDZ+ryOS7647UuxwIdXC7Tjw==",
+        "requested": "[2.0.0, )",
+        "resolved": "2.0.0",
+        "contentHash": "WiHEdURYTlo9fl/vun1d5fnbvqjv5MZaqkYX1XxBrGz7CN0JmQdCaerNpEurWIVLKbWo8uri3vPVDE8oD9UMEQ==",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "[5.0.0, 6.0.0)",
-          "Newtonsoft.Json": "12.0.1"
+          "Microsoft.Extensions.Primitives": "5.0.1"
+        }
+      },
+      "Arbor.ModelBinding.NewtonsoftJson": {
+        "type": "Direct",
+        "requested": "[2.0.0, )",
+        "resolved": "2.0.0",
+        "contentHash": "XEfnFkeG50exlFMyBh5HfYeh/vl4YWgmtfoLtBRNgM/fTNCSGMYJ1o0tJtUfFg1M78D5sPyz/+TrYXcT+qUthA==",
+        "dependencies": {
+          "Arbor.ModelBinding": "2.0.0",
+          "Microsoft.Extensions.Primitives": "5.0.1",
+          "Newtonsoft.Json": "13.0.1"
         }
       },
       "Microsoft.Extensions.Logging.Abstractions": {
@@ -50,15 +78,15 @@
       },
       "Microsoft.Extensions.Primitives": {
         "type": "Direct",
-        "requested": "[5.0.0, )",
-        "resolved": "5.0.0",
-        "contentHash": "cI/VWn9G1fghXrNDagX9nYaaB/nokkZn0HYAawGaELQrl8InSezfe9OnfPZLcJq3esXxygh3hkq2c3qoV3SDyQ=="
+        "requested": "[5.0.1, )",
+        "resolved": "5.0.1",
+        "contentHash": "5WPSmL4YeP7eW+Vc8XZ4DwjYWBAiSwDV9Hm63JJWcz1Ie3Xjv4KuJXzgCstj48LkLfVCYa7mLcx7y+q6yqVvtw=="
       },
       "Newtonsoft.Json": {
         "type": "Direct",
-        "requested": "[12.0.3, )",
-        "resolved": "12.0.3",
-        "contentHash": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg=="
+        "requested": "[13.0.1, )",
+        "resolved": "13.0.1",
+        "contentHash": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A=="
       }
     }
   }

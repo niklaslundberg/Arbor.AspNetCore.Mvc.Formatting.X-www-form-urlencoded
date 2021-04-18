@@ -1,8 +1,8 @@
 ﻿using System;
-using Arbor.ModelBinding.Core;
+using Arbor.ModelBinding.NewtonsoftJson;
 using Microsoft.AspNetCore.Http;
 
-namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms
 {
     public static class AspNetCoreFormsExtensions
     {
@@ -16,7 +16,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
             return ParseFromCollection(formDataCollection, typeof(T)) as T;
         }
 
-        public static object ParseFromCollection(this IFormCollection formDataCollection, Type targetType)
+        public static object? ParseFromCollection(this IFormCollection formDataCollection, Type targetType)
         {
             if (formDataCollection == null)
             {
@@ -28,7 +28,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
                 throw new ArgumentNullException(nameof(targetType));
             }
 
-            return FormsExtensions.ParseFromPairs(formDataCollection, targetType);
+            return formDataCollection.ParseFromPairs(targetType);
         }
     }
 }

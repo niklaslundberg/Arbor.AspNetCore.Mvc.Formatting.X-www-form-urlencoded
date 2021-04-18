@@ -1,20 +1,16 @@
-﻿using Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core;
+﻿using Arbor.AspNetCore.Mvc.Formatting.HtmlForms;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Arbor.AspNetCore.Formatting.Tests.Integration
 {
     public class Startup
     {
 
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public Startup(IConfiguration configuration) => Configuration = configuration;
 
         public IConfiguration Configuration { get; }
 

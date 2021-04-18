@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0A154CB-7526-466D-8F5B-446CED49DCEB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{D0A154CB-7526-466D-8F5B-446CED49DCEB}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
@@ -20,9 +20,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspNetCore.Mvc.Format
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb", "samples\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb.csproj", "{3F86B675-375E-4A55-A3D3-74560DB37AC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit", "test\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Tests.Unit\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit.csproj", "{A5A16585-AB5F-40BB-9982-9D449B07A6E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit", "tests\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Tests.Unit\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit.csproj", "{A5A16585-AB5F-40BB-9982-9D449B07A6E4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspNetCore.Formatting.Tests.Integration", "test\Arbor.AspNetCore.Formatting.Tests.Integration\Arbor.AspNetCore.Formatting.Tests.Integration.csproj", "{6A308538-DF98-4368-AF2E-F92F8E897C38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbor.AspNetCore.Formatting.Tests.Integration", "tests\Arbor.AspNetCore.Formatting.Tests.Integration\Arbor.AspNetCore.Formatting.Tests.Integration.csproj", "{6A308538-DF98-4368-AF2E-F92F8E897C38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CCBB5AA5-E5FA-478B-8C3E-08BB7456189C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{45399650-0F48-4A57-A284-99CEFF034B54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +89,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F86B675-375E-4A55-A3D3-74560DB37AC5} = {45399650-0F48-4A57-A284-99CEFF034B54}
+		{A5A16585-AB5F-40BB-9982-9D449B07A6E4} = {CCBB5AA5-E5FA-478B-8C3E-08BB7456189C}
+		{6A308538-DF98-4368-AF2E-F92F8E897C38} = {CCBB5AA5-E5FA-478B-8C3E-08BB7456189C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C73E3C8-6AAA-44D2-8635-A6626568AA4B}

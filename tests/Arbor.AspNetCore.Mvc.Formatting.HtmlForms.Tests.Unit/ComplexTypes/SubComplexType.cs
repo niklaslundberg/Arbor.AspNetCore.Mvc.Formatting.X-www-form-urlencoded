@@ -14,6 +14,6 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit.ComplexTypes
 
         public int SubOtherProperty { get; }
 
-        public ICollection<SubListItem> SubListItems { get; set; }
+        public ICollection<SubListItem>? SubListItems { get; set; }
     }
 }

@@ -1,9 +1,9 @@
-﻿namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit.ComplexTypes
+﻿namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
 {
     public class MainType
     {
-        public string A { get; set; }
+        public string? A { get; set; }
 
-        public SubType S { get; set; }
+        public SubType? S { get; set; }
     }
 }

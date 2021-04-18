@@ -1,13 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-
-using Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core.Tests.Unit.ComplexTypes;
-
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +13,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
     {
         [HttpPost]
         [Route("files")]
-        public IActionResult Files(IEnumerable<IFormFile> files)
+        public IActionResult Files(IEnumerable<IFormFile>? files)
         {
             if (files is null || !files.Any())
             {
@@ -31,8 +26,8 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
         [HttpPost]
         [Route("")]
         public IActionResult Index(
-            [FromBody] SampleClassWithCtor sampleClassWithCtor,
-            IFormFile theFile)
+            [FromBody] SampleClassWithCtor? sampleClassWithCtor,
+            IFormFile? theFile)
         {
             if (string.IsNullOrWhiteSpace(sampleClassWithCtor?.A))
             {
@@ -49,10 +44,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
 
         [HttpPost]
         [Route("complex")]
-        public IActionResult Index([FromBody] MainType mainType)
-        {
-            return new ObjectResult(mainType);
-        }
+        public IActionResult Index([FromBody] MainType mainType) => new ObjectResult(mainType);
 
         [HttpPost]
         [Route("~/data")]
@@ -66,12 +58,7 @@ namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
                 data = await reader.ReadToEndAsync();
             }
 
-            return new ContentResult()
-                   {
-                       Content = data,
-                       ContentType = "text/plain",
-                       StatusCode = 200
-                   };
+            return new ContentResult {Content = data, ContentType = "text/plain", StatusCode = 200};
         }
     }
 }

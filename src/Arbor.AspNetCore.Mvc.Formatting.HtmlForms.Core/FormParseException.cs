@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms
 {
     public class FormParseException : Exception
     {
