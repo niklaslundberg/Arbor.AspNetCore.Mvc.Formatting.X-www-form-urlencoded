@@ -9,7 +9,7 @@
     <PackageReference Include="Machine.Specifications.Should" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Primitives" Version="6.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.Core\Arbor.AspNetCore.Mvc.Formatting.HtmlForms.csproj" />
