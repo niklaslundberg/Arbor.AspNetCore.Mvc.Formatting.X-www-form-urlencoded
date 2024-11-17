@@ -1,26 +1,34 @@
-﻿namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
-{
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.Extensions.Hosting;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
+namespace Arbor.AspNetCore.Mvc.Formatting.HtmlForms.SampleWeb
+{
     using Serilog;
 
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
             var logger = new LoggerConfiguration().WriteTo.Console().CreateLogger();
 
-            var host = Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(
-                    builder => { builder.UseStartup<Startup>()
+            var webApplicationBuilder = WebApplication.CreateBuilder(args);
 
-                .UseSerilog(logger);
-                    })
+            webApplicationBuilder
+                .Services.AddSerilog().AddMvc(
+                options => options.InputFormatters.Add(new XWwwFormUrlEncodedFormatter()));
+            webApplicationBuilder.Services.AddControllersWithViews();
 
-                .Build();
+            var app = webApplicationBuilder.Build();
 
-            host.Run();
+            app.UseDeveloperExceptionPage();
+
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseEndpoints(builder => builder.MapControllers());
+
+            app.Run();
 
             logger.Dispose();
         }
