@@ -29,7 +29,7 @@ IF "%Arbor.Build.Bootstrapper.AllowPrerelease%" == "" (
 SET Arbor.Build.NuGet.ReinstallArborPackageEnabled=true
 SET Arbor.Build.NuGet.VersionUpdateEnabled=false
 SET Arbor.Build.Artifacts.PdbArtifacts.Enabled=true
-SET Arbor.Build.NuGet.Package.CreateNuGetWebPackages.Enabled=true
+SET Arbor.Build.NuGet.Package.CreateNuGetWebPackages.Enabled=false
 CALL dotnet arbor-build
 
 EXIT /B %ERRORLEVEL%
