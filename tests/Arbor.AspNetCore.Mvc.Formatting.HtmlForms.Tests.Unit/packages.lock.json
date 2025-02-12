@@ -40,9 +40,9 @@
       },
       "Microsoft.AspNetCore.TestHost": {
         "type": "Direct",
-        "requested": "[9.0.1, )",
-        "resolved": "9.0.1",
-        "contentHash": "OaXdHaRxyveFd//y79iAGNyRORgH7K5+Hdqj4PzEQlI0buH8bKlAM6HB9k+j03Qe/xcduPoJ9UuPYDTrzGcZZg=="
+        "requested": "[9.0.2, )",
+        "resolved": "9.0.2",
+        "contentHash": "aGJGMPRBqhKNm67/CjzP6kicK+CcrlmY7MaemowCuIi8Z6Q7+5ofvA/Ka8XKF5gtqNjP1vO5mctDD06R3yzWPA=="
       },
       "Microsoft.Extensions.Logging.Abstractions": {
         "type": "Direct",
