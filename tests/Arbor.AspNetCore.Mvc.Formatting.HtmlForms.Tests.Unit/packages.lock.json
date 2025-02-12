@@ -55,9 +55,9 @@
       },
       "Microsoft.Extensions.Primitives": {
         "type": "Direct",
-        "requested": "[9.0.1, )",
-        "resolved": "9.0.1",
-        "contentHash": "bHtTesA4lrSGD1ZUaMIx6frU3wyy0vYtTa/hM6gGQu5QNrydObv8T5COiGUWsisflAfmsaFOe9Xvw5NSO99z0g=="
+        "requested": "[9.0.2, )",
+        "resolved": "9.0.2",
+        "contentHash": "puBMtKe/wLuYa7H6docBkLlfec+h8L35DXqsDKKJgW0WY5oCwJ3cBJKcDaZchv6knAyqOMfsl6VUbaR++E5LXA=="
       },
       "Microsoft.NET.Test.Sdk": {
         "type": "Direct",
@@ -1115,7 +1115,7 @@
           "Arbor.ModelBinding": "[2.6.0, )",
           "Arbor.ModelBinding.NewtonsoftJson": "[2.6.0, )",
           "Microsoft.Extensions.Logging.Abstractions": "[9.0.1, )",
-          "Microsoft.Extensions.Primitives": "[9.0.1, )",
+          "Microsoft.Extensions.Primitives": "[9.0.2, )",
           "Newtonsoft.Json": "[13.0.3, )"
         }
       }
