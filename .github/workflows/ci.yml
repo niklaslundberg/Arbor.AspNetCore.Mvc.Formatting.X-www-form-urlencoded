@@ -5,16 +5,13 @@ on: [push]
 jobs:
   build:
 
-    runs-on: windows-2022
+    runs-on: windows-2025
 
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x'
-    - uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '9.0.x'
+        dotnet-version: '10.0.x'
     - name: install-tools
       run: |
         dotnet tool install --global Arbor.Tooler.GlobalTool
